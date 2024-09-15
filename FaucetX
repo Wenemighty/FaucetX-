@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaucetX - Claim Free Crypto</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        form { margin-top: 50px; }
+        input, button { margin: 10px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to FaucetX!</h1>
+    <form id="claimForm">
+        <input type="text" id="wallet" placeholder="Enter your crypto wallet address" required>
+        <button type="submit">Claim Now</button>
+    </form>
+    <p id="status"></p>
+    <script>
+        document.getElementById('claimForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const walletAddress = document.getElementById('wallet').value;
+            document.getElementById('status').innerText = 'Claiming for ' + walletAddress;
+        });
+    </script>
+</body>
+</html>
